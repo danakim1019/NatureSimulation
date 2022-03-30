@@ -193,6 +193,10 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 		cam.ProcessKeyboard(LEFT, deltaTime);
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 		cam.ProcessKeyboard(RIGHT, deltaTime);
+	if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+		cam.ProcessKeyboard(UPPER, deltaTime);
+	if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS)
+		cam.ProcessKeyboard(DOWN, deltaTime);
 }
 
 // glfw: whenever the mouse scroll wheel scrolls, this callback is called

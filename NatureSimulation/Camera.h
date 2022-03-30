@@ -13,7 +13,9 @@ enum Camera_Movement {
 	FORWARD,
 	BACKWARD,
 	LEFT,
-	RIGHT
+	RIGHT,
+	DOWN,
+	UPPER
 };
 
 // Default camera values
@@ -76,6 +78,10 @@ public:
 			Position -= Right * velocity;
 		if (direction == RIGHT)
 			Position += Right * velocity;
+		if (direction == DOWN)
+			Position -=  Up * velocity;
+		if (direction == UPPER)
+			Position += Up * velocity;
 	}
 
 	void cameraPositionMove(float xoffset, float yoffset,float deltaTime)

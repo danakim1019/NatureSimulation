@@ -25,7 +25,7 @@ namespace simulation {
 		char name[] = "water";
 		water = new simulation::Water(name,0,0,256);
 		m_grid = new grid();
-		char path[] = "Models/Puddle/model.obj";
+		char path[] = "Models/Puddle/model2.obj";
 		loadedModel = new Model(path);
 	}
 
@@ -65,6 +65,7 @@ namespace simulation {
 		water->draw(model, viewMat, projection);
 		m_grid->draw(model, viewMat, projection);
 
+		loadedModel->draw(model, viewMat, projection);
 	}
 }
 
